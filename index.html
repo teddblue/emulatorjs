@@ -8,21 +8,25 @@
 </head>
 <body>
     <script>
+        const games = [
+            {title: "Mario Kart 64 (USA)", filetype: "z64"},
+            {title: "Star Fox 64 (USA) (Rev 1)", filetype: "z64"}
+        ]
         const list = ["Mario Kart 64 (USA)", "Star Fox 64 (USA) (Rev 1)"]
         
-        for(i=0; i<list.Length; i++){
-            var cover = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + list[i] + ".png"
-            var link = "https://vimm.net"
+        for(i=0; i<list.length; i++){
+            var icon = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + list[i] + ".png"
+            var link = "player.html?game=" + list[i]
 
             var game = document.createElement("a")
             game.setAttribute("href", link)
             game.setAttribute("innerHtml", list[i])
             game.className = "a"
-            //game.text = list[i]
 
-            //var icon = document.createElement("img")
-            //icon.setAttribute("src", cover)
-            //game.appendChild(icon)
+            var cover = document.createElement("img")
+            cover.setAttribute("src", icon)
+            cover.className = "img"
+            game.appendChild(cover)
 
             document.body.appendChild(game)
         }
