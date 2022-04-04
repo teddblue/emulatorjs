@@ -7,6 +7,20 @@
     <title>gamesiguess</title>
 </head>
 <body>
-    
+    <a href=""></a>
+    <script>
+        const json = "games.json"
+        var config = {}
+        JSON.parse(json, config)
+
+        var list = ["Mario Kart 64 (USA)", "Star Fox 64 (USA) (Rev 1)"]
+        
+        for(i=0; i<list.Length; i++){
+            const icon = document.createElement("img")
+            icon.src = "http://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + list[i] + ".png"
+            document.body.appendChild(icon)
+        }
+        
+    </script>
 </body>
 </html>
