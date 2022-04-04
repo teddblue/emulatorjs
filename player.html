@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <p>game yay!</p>
+    <div style='width:640px;height:480px;max-width:100%'>
+        <div id='game'></div>
+    </div>
+    
+    <script type='text/javascript'>
+        var game = new URLSearchParams(window.location.search).get('game')
+        var id = new URLSearchParams(window.location.search).get('id')
+
+        EJS_player = '#game';
+        EJS_core = 'n64';
+        EJS_startOnLoaded = true;
+        EJS_color = '#FF0000';
+        EJS_gameID = id;
+        EJS_AdUrl = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + title + ".png"
+
+        // URL to Game rom
+        EJS_gameUrl = 'roms/' + game + ".z64"
+        EJS_pathtodata = 'data/';
+    </script>
+    
+    <script src='data/loader.js'></script>
 </body>
 </html>
