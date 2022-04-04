@@ -8,17 +8,23 @@
 </head>
 <body>
     <script>
-        var list = ["Mario Kart 64 (USA)", "Star Fox 64 (USA) (Rev 1)"]
+        const list = ["Mario Kart 64 (USA)", "Star Fox 64 (USA) (Rev 1)"]
         
         for(i=0; i<list.Length; i++){
-            var cover = "http://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + list[i] + ".png"
-            const link = "http://vimm.net"
+            var cover = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + list[i] + ".png"
+            var link = "https://vimm.net"
 
-            const icon = new Image();
-            icon.src = cover
-            document.body.appendChild(icon)
+            var game = document.createElement("a")
+            game.setAttribute("href", link)
+            game.setAttribute("innerHtml", list[i])
+            //game.text = list[i]
+
+            //var icon = document.createElement("img")
+            //icon.setAttribute("src", cover)
+            //game.appendChild(icon)
+
+            document.body.appendChild(game)
         }
-        
     </script>
 </body>
 </html>
