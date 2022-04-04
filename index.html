@@ -8,15 +8,14 @@
 </head>
 <body>
     <script>
-        //const json = "games.json"
-        //var config = {}
-        //JSON.parse(json, config)
-
         var list = ["Mario Kart 64 (USA)", "Star Fox 64 (USA) (Rev 1)"]
         
         for(i=0; i<list.Length; i++){
-            const icon = document.createElement("img")
-            icon.src = "http://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + list[i] + ".png"
+            var cover = "http://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + list[i] + ".png"
+            const link = "http://vimm.net"
+
+            const icon = new Image();
+            icon.src = cover
             document.body.appendChild(icon)
         }
         
