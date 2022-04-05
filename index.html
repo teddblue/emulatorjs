@@ -15,7 +15,7 @@
             {title: "Star Fox 64 (USA) (Rev 1)", filetype: "z64"}
         ]**/
         const json = fetch("games.json")
-        const games = JSON.parse(json)
+        const games = json//JSON.parse(json)
         
         for(i=0; i<games.length; i++){
             var icon = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + games[i].title + ".png"
