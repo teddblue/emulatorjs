@@ -8,14 +8,13 @@
     <title>gamesiguess</title>
 </head>
 <body>
-    <script type="text/javascript" src="config.json"></script>
+    <script type="text/javascript" src="games.json"></script>
     <script>
         /**const games = [
             {title: "Mario Kart 64 (USA)", filetype: "z64"},
             {title: "Star Fox 64 (USA) (Rev 1)", filetype: "z64"}
         ]**/
-        const json = JSON.parse(config)
-        const games = json.games
+        const games = JSON.parse(games)
         
         for(i=0; i<games.length; i++){
             var icon = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + games[i].title + ".png"
