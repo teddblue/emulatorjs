@@ -17,7 +17,8 @@
         var title = new URLSearchParams(window.location.search).get('game')
         //var id = new URLSearchParams(window.location.search).get('id')
 
-        const games = JSON.parse(games)
+        const json = fetch("games.json")
+        const games = JSON.parse(json)
 
         var id = games.findIndex((element) => element.title === title);
         var game = games[i]
