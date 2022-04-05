@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,12 +16,16 @@
         var game = new URLSearchParams(window.location.search).get('game')
         var id = new URLSearchParams(window.location.search).get('id')
 
+        document.title = game
+        var favicon = document.getElementById("favicon")
+        favicon.href = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + games[i].title + ".png"
+
+
         EJS_player = '#game';
         EJS_core = 'n64';
-        //EJS_startOnLoaded = true;
+        EJS_startOnLoaded = true;
         EJS_color = '#FF0000';
         EJS_gameID = id;
-        EJS_AdUrl = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + game + ".png";
 
         // URL to Game rom
         EJS_gameUrl = 'roms/' + game + ".z64";
